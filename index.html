@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instituto Asas</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+
+body{
+  background:#0f172a;
+  color:#fff;
+  scroll-behavior:smooth;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:0 20px;
+}
+
+section{
+  padding:120px 0;
+  position:relative;
+}
+
+.tag{
+  color:#c6a23a;
+  font-size:14px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+h1,h2{
+  font-weight:700;
+}
+
+h1{
+  font-size:48px;
+  margin-top:20px;
+}
+
+h2{
+  font-size:36px;
+  margin:15px 0 20px;
+}
+
+h2 span, h1 span{
+  color:#c6a23a;
+}
+
+p{
+  color:#cbd5e1;
+  line-height:1.7;
+  max-width:600px;
+}
+
+.btn{
+  display:inline-block;
+  padding:14px 32px;
+  border-radius:40px;
+  font-weight:600;
+  margin-top:30px;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.btn-primary{
+  background:#c6a23a;
+  color:#111;
+}
+
+.btn-primary:hover{
+  background:#e0b94f;
+  transform:translateY(-3px);
+}
+
+.btn-outline{
+  border:1px solid #c6a23a;
+  color:#c6a23a;
+  margin-left:15px;
+}
+
+.btn-outline:hover{
+  background:#c6a23a;
+  color:#111;
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  text-align:center;
+  justify-content:center;
+  flex-direction:column;
+}
+
+/* CARDS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+  margin-top:60px;
+}
+
+.card{
+  background:#1e293b;
+  padding:40px 30px;
+  border-radius:20px;
+  position:relative;
+  transition:.4s;
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  height:5px;
+  width:100%;
+  background:#c6a23a;
+  border-radius:20px 20px 0 0;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
+
+/* SOBRE */
+.sobre{
+  background:#111827;
+}
+
+/* AGENDAMENTO */
+.agendamento{
+  background:linear-gradient(180deg,#111827,#0f172a);
+  text-align:center;
+}
+
+/* CONTATO */
+.contato{
+  background:#111827;
+}
+
+.contato-box{
+  display:flex;
+  gap:60px;
+  flex-wrap:wrap;
+  margin-top:50px;
+}
+
+form{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+input, textarea{
+  padding:14px;
+  border:none;
+  border-radius:8px;
+  background:#1f2937;
+  color:#fff;
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  background:#0f172a;
+  color:#777;
+}
+
+/* ANIMAÇÃO */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:.8s ease;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+@media(max-width:768px){
+  h1{font-size:32px}
+  h2{font-size:26px}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container reveal">
+    <span class="tag">Instituto Asas</span>
+    <h1>Cuidado que <span>transforma vidas</span></h1>
+    <p>Promovemos acolhimento, desenvolvimento humano e impacto social com excelência e propósito.</p>
+    <a href="#agendamento" class="btn btn-primary">Agendar Atendimento</a>
+    <a href="#sobre" class="btn btn-outline">Saiba Mais</a>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="sobre">
+  <div class="container reveal">
+    <span class="tag">Sobre Nós</span>
+    <h2>Nossa <span>Missão</span></h2>
+    <p>O Instituto Asas nasceu com o propósito de oferecer suporte, acolhimento e desenvolvimento humano, criando oportunidades e promovendo transformação social.</p>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section>
+  <div class="container reveal">
+    <span class="tag">Serviços</span>
+    <h2>O que <span>Oferecemos</span></h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Atendimento Individual</h3>
+        <p>Suporte personalizado para cada necessidade.</p>
+      </div>
+
+      <div class="card">
+        <h3>Projetos Sociais</h3>
+        <p>Iniciativas voltadas ao impacto coletivo.</p>
+      </div>
+
+      <div class="card">
+        <h3>Capacitação</h3>
+        <p>Treinamentos e desenvolvimento profissional.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPE -->
+<section class="sobre">
+  <div class="container reveal">
+    <span class="tag">Equipe</span>
+    <h2>Nossa <span>Equipe</span></h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Profissional 1</h3>
+        <p>Especialista em desenvolvimento humano.</p>
+      </div>
+
+      <div class="card">
+        <h3>Profissional 2</h3>
+        <p>Atuação em projetos sociais e acolhimento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AGENDAMENTO -->
+<section id="agendamento" class="agendamento">
+  <div class="container reveal">
+    <span class="tag">Agendamento</span>
+    <h2>Agende um <span>Atendimento</span></h2>
+    <p>Estamos prontos para acolher você.</p>
+    <a href="#" class="btn btn-primary">Agendar agora</a>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="contato">
+  <div class="container reveal">
+    <span class="tag">Contato</span>
+    <h2>Fale <span>Conosco</span></h2>
+
+    <div class="contato-box">
+      <div>
+        <p><strong>Email:</strong> contato@institutoasas.com</p>
+        <p><strong>Telefone:</strong> (27) 99923-0190</p>
+      </div>
+
+      <form>
+        <input type="text" placeholder="Seu nome">
+        <input type="email" placeholder="Seu email">
+        <textarea rows="4" placeholder="Mensagem"></textarea>
+        <button class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Instituto Asas — Todos os direitos reservados.
+</footer>
+
+<script>
+const reveals=document.querySelectorAll(".reveal");
+window.addEventListener("scroll",()=>{
+  reveals.forEach(el=>{
+    if(el.getBoundingClientRect().top<window.innerHeight-100){
+      el.classList.add("active");
+    }
+  })
+})
+</script>
+
+</body>
+</html>
